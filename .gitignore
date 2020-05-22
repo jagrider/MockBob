@@ -1,0 +1,10 @@
+.DS_Store
+
+# Xcode 
+Pods
+*.xcuserstate
+xcuserdata
+Podfile.lock
+MockBob.xcworkspace/xcshareddata/*
+MockBob.xcworkspace/xcuserdata/*
+MockBob.xcodeproj/xcuserdata/*
