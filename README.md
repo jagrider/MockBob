@@ -19,14 +19,14 @@ You can install the latest version of MockBob by visiting the [releases page](ht
 
 ### Build it yourself
 
-If you'd rather build the app yourself,
-0. Make sure the latest version of Xcode is installed
-1. Download the source code included with each release, or clone this repository
-2. Open the project in Xcode. You can do this by opening the MockBob.xcodeproj file, or in `Xcod`e -> `File` -> `Open` -> Select the folder containing MockBob AND MockBob.xcodeproj
-3. Use `CMD+B` to build it. Alternatively, in the top menu do `Product` -> `Build`.
-4. Under the Products folder you should see `MockBob.app`. `Right click` -> `Show in Finder` -> Copy with `CMD+C`
-5. Open the Applications folder and Paste with `CMD+V`
-6. Meme to your heart's content
+If you'd rather build the app yourself:
+1. Make sure the latest version of Xcode is installed
+2. Download the source code included with each release, or clone this repository
+3. Open the project in Xcode. You can do this by opening the MockBob.xcodeproj file, or in `Xcod`e -> `File` -> `Open` -> Select the folder containing MockBob AND MockBob.xcodeproj
+4. Use `CMD+B` to build it. Alternatively, in the top menu do `Product` -> `Build`.
+5. Under the Products folder in Xcode you should see `MockBob.app`. `Right click` -> `Show in Finder` -> Copy with `CMD+C`
+6. Open the Applications folder and Paste with `CMD+V`
+7. Meme to your heart's content
 
 ## AppFacts
 - Written in 100% Swift
@@ -38,4 +38,5 @@ If you'd rather build the app yourself,
 Features I am thinking about adding:
 - Global keyboard shortcut to meme even faster
 - Update copy/paste buttons for more immersion
+- Auto-open on startup
 - Other things
