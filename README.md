@@ -13,9 +13,9 @@ I got tired of having to google a "spongebob mock generator" online every time I
 
 ## HOw Do i usE IT
 ### Prebuilt
-You can install the latest version of MockBob by visiting the [releases page](https://github.com/jagrider/MockBob/releases). Download the `.dmg` file and install just like any other macOS application. 
+You can install the latest version of MockBob by visiting the [releases page](https://github.com/jagrider/MockBob/releases). Download the `.dmg` file and install just like any other macOS application. Each version of MockBob has been [notarized](https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution) by Apple.
 
-**NOTE:** For the time being, this app is not signed by a developer profile. You may recieve a warning that it was made from an "unidentified developer". If that is the case, please [follow these instructions](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac). Alternatively, follow the instructions below.
+But, if you're like me, you might want to build it from source. Continue onward!
 
 ### Build it yourself
 
