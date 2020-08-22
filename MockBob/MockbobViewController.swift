@@ -47,6 +47,10 @@ class MockbobViewController: NSViewController, NSTextViewDelegate {
         NSApplication.shared.terminate(self)
     }
     
+    @IBAction func clearTextView(_ sender: NSButton) {
+        mockTextView.string = ""
+    }
+    
     // MARK: MockBob Logic
     func textDidChange(_ notification: Notification) {
         guard let textField = notification.object as? NSTextView else {

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -744,15 +745,28 @@
                                     <action selector="quitAppWithSender:" target="GyO-pc-qHE" id="1cL-Z9-gWd"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eic-KP-06p">
+                                <rect key="frame" x="16" y="4" width="72" height="32"/>
+                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FT1-Wr-O19">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clearTextView:" target="GyO-pc-qHE" id="KZ5-Kf-M3A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="TME-iM-t4N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eic-KP-06p" secondAttribute="trailing" constant="12" symbolic="YES" id="754-lu-lH6"/>
                             <constraint firstItem="TME-iM-t4N" firstAttribute="top" secondItem="P21-hJ-bN2" secondAttribute="bottom" constant="12" symbolic="YES" id="An2-kb-u4f"/>
                             <constraint firstItem="NgA-te-xJK" firstAttribute="trailing" secondItem="P21-hJ-bN2" secondAttribute="trailing" id="CC8-4R-kcL"/>
                             <constraint firstItem="NgA-te-xJK" firstAttribute="leading" secondItem="LcU-yR-OjU" secondAttribute="leading" id="Fe6-XY-iCm"/>
                             <constraint firstItem="NgA-te-xJK" firstAttribute="leading" secondItem="lxn-Gj-nZd" secondAttribute="leading" constant="22" id="GOi-Hb-Rzz"/>
                             <constraint firstItem="NgA-te-xJK" firstAttribute="centerX" secondItem="TME-iM-t4N" secondAttribute="centerX" id="HB5-nO-pay"/>
                             <constraint firstItem="P21-hJ-bN2" firstAttribute="baseline" secondItem="LcU-yR-OjU" secondAttribute="baseline" id="OCS-YZ-seb"/>
+                            <constraint firstItem="eic-KP-06p" firstAttribute="top" secondItem="LcU-yR-OjU" secondAttribute="bottom" constant="12" id="OPH-kc-vHu"/>
                             <constraint firstAttribute="bottom" secondItem="NgA-te-xJK" secondAttribute="bottom" constant="78" id="Z4b-9A-l4P"/>
+                            <constraint firstItem="eic-KP-06p" firstAttribute="leading" secondItem="lxn-Gj-nZd" secondAttribute="leading" constant="22" id="d6H-zP-WTw"/>
                             <constraint firstItem="LcU-yR-OjU" firstAttribute="top" secondItem="NgA-te-xJK" secondAttribute="bottom" constant="13" id="dgj-12-gfC"/>
                             <constraint firstAttribute="trailing" secondItem="NgA-te-xJK" secondAttribute="trailing" constant="22" id="s7T-AC-K9u"/>
                             <constraint firstItem="NgA-te-xJK" firstAttribute="top" secondItem="lxn-Gj-nZd" secondAttribute="top" constant="16" id="vnB-nD-AoR"/>
@@ -767,6 +781,77 @@
                 <customObject id="uRc-Pl-cYd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="74" y="287"/>
+        </scene>
+        <!--Preferences View Controller-->
+        <scene sceneID="T9x-LA-eym">
+            <objects>
+                <viewController storyboardIdentifier="PreferencesViewController" id="4ra-S1-oph" customClass="PreferencesViewController" customModule="MockBob" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="4Gt-Sa-9eS">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3So-lL-Fdv">
+                                <rect key="frame" x="35" y="202" width="331" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="hWr-28-6DX"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Start MockBob when your computer restarts" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="GXx-Ct-d8l">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="menu" size="14"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="58z-YB-jJg">
+                                <rect key="frame" x="35" y="246" width="314" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="K3i-Y3-sdV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="zQC-Mi-Yfk"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="PReFereNceS" id="aUJ-Nt-kA4">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pef-lc-cFN">
+                                <rect key="frame" x="35" y="169" width="304" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="qHT-Yf-KSC"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Enable global MockBob shortcut: TODO" bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="HT7-nJ-KPp">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="menu" size="14"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4sM-si-U6O">
+                                <rect key="frame" x="35" y="136" width="304" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="KrI-Lk-hmy"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Clear text box every time app is opened" bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="zOs-Zl-pfO">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="menu" size="14"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="58z-YB-jJg" firstAttribute="top" secondItem="4Gt-Sa-9eS" secondAttribute="top" constant="20" id="3l4-e5-Dab"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="58z-YB-jJg" secondAttribute="trailing" constant="20" symbolic="YES" id="EIX-a6-gGZ"/>
+                            <constraint firstItem="3So-lL-Fdv" firstAttribute="top" secondItem="58z-YB-jJg" secondAttribute="bottom" constant="28" id="IWd-ge-oC2"/>
+                            <constraint firstItem="Pef-lc-cFN" firstAttribute="leading" secondItem="4Gt-Sa-9eS" secondAttribute="leading" constant="37" id="LIl-qo-wMG"/>
+                            <constraint firstItem="4sM-si-U6O" firstAttribute="top" secondItem="Pef-lc-cFN" secondAttribute="bottom" constant="19" id="PJJ-eY-1sR"/>
+                            <constraint firstItem="58z-YB-jJg" firstAttribute="leading" secondItem="4Gt-Sa-9eS" secondAttribute="leading" constant="37" id="Xh0-eS-tzo"/>
+                            <constraint firstItem="3So-lL-Fdv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Gt-Sa-9eS" secondAttribute="leading" constant="20" symbolic="YES" id="Zoh-rG-lEx"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pef-lc-cFN" secondAttribute="trailing" constant="20" symbolic="YES" id="akd-cA-MJ0"/>
+                            <constraint firstAttribute="trailing" secondItem="3So-lL-Fdv" secondAttribute="trailing" constant="36" id="bDU-pF-eMg"/>
+                            <constraint firstItem="Pef-lc-cFN" firstAttribute="top" secondItem="3So-lL-Fdv" secondAttribute="bottom" constant="19" id="iKI-tc-Moy"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4sM-si-U6O" secondAttribute="trailing" constant="20" symbolic="YES" id="lFA-Ae-04a"/>
+                            <constraint firstItem="4sM-si-U6O" firstAttribute="leading" secondItem="4Gt-Sa-9eS" secondAttribute="leading" constant="37" id="q4M-g7-4nI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="aeg-9s-QZT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="675"/>
         </scene>
     </scenes>
 </document>

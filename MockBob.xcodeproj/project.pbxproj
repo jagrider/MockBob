@@ -11,6 +11,7 @@
 		F5E4C6C22476316C002BF338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E4C6C12476316C002BF338 /* Assets.xcassets */; };
 		F5E4C6C52476316C002BF338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E4C6C32476316C002BF338 /* Main.storyboard */; };
 		F5E4C6CF247631E2002BF338 /* MockbobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4C6CD247631E2002BF338 /* MockbobViewController.swift */; };
+		F5F3869E247BAB0B0018561A /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3869D247BAB0B0018561A /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F5E4C6C62476316C002BF338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E4C6C72476316C002BF338 /* MockBob.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MockBob.entitlements; sourceTree = "<group>"; };
 		F5E4C6CD247631E2002BF338 /* MockbobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockbobViewController.swift; sourceTree = "<group>"; };
+		F5F3869D247BAB0B0018561A /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F5E4C6C62476316C002BF338 /* Info.plist */,
 				F5E4C6C72476316C002BF338 /* MockBob.entitlements */,
 				F5E4C6CD247631E2002BF338 /* MockbobViewController.swift */,
+				F5F3869D247BAB0B0018561A /* PreferencesViewController.swift */,
 			);
 			path = MockBob;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			files = (
 				F5E4C6CF247631E2002BF338 /* MockbobViewController.swift in Sources */,
 				F5E4C6BE2476316B002BF338 /* AppDelegate.swift in Sources */,
+				F5F3869E247BAB0B0018561A /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +274,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MockBob/MockBob.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = TWSS92LN5D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MockBob/Info.plist;
@@ -281,6 +286,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jagrider.MockBob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -292,9 +298,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MockBob/MockBob.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = TWSS92LN5D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MockBob/Info.plist;
@@ -303,6 +310,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jagrider.MockBob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
