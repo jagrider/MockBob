@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -686,12 +686,16 @@
             <objects>
                 <viewController storyboardIdentifier="MockbobViewController" id="GyO-pc-qHE" customClass="MockbobViewController" customModule="MockBob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="lxn-Gj-nZd">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="243"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-yR-OjU">
-                                <rect key="frame" x="16" y="37" width="168" height="32"/>
-                                <buttonCell key="cell" type="push" title="Paste from Clipboard" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YOA-A5-Oy5">
+                            <button toolTip="Paste" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-yR-OjU" userLabel="Paste Button" customClass="MBPointerButton" customModule="MockBob" customModuleProvider="target">
+                                <rect key="frame" x="12" y="10" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="Adc-h2-Att"/>
+                                    <constraint firstAttribute="height" constant="26" id="gYn-Gk-2gE"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="paste" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YOA-A5-Oy5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -699,88 +703,105 @@
                                     <action selector="pasteFromClipboard:" target="GyO-pc-qHE" id="KlI-tZ-STU"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P21-hJ-bN2">
-                                <rect key="frame" x="184" y="37" width="150" height="32"/>
-                                <buttonCell key="cell" type="push" title="Copy to Clipboard" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rq5-Ml-r9F">
+                            <button toolTip="Clear" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xKe-qT-Wfq" userLabel="Clear Button" customClass="MBPointerButton" customModule="MockBob" customModuleProvider="target">
+                                <rect key="frame" x="60" y="9" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="IBD-UZ-VT6"/>
+                                    <constraint firstAttribute="width" constant="29" id="p4W-a3-QgZ"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="eraser" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="lQT-lQ-feQ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="copyToClipboard:" target="GyO-pc-qHE" id="2uV-Xb-Ouq"/>
+                                    <action selector="clearTextView:" target="GyO-pc-qHE" id="dgN-r6-52V"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Quit MockBob" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E6R-H4-Eut" userLabel="Quit Button" customClass="MBPointerButton" customModule="MockBob" customModuleProvider="target">
+                                <rect key="frame" x="348" y="13" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="8El-Fn-fdg"/>
+                                    <constraint firstAttribute="width" constant="20" id="TrM-q4-f08"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="power" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="p8j-5w-f6K">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitAppWithSender:" target="GyO-pc-qHE" id="UVg-XO-Lcc"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Copy" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yhe-lm-RpU" userLabel="Copy Button" customClass="MBPointerButton" customModule="MockBob" customModuleProvider="target">
+                                <rect key="frame" x="115" y="9" width="25" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Jyd-nD-aLk"/>
+                                    <constraint firstAttribute="width" constant="25" id="hZy-0b-e3E"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="copy" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ZMd-8d-Jl5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="copyToClipboard:" target="GyO-pc-qHE" id="ILF-6Q-Ju9"/>
                                 </connections>
                             </button>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgA-te-xJK">
-                                <rect key="frame" x="22" y="78" width="306" height="156"/>
+                                <rect key="frame" x="0.0" y="46" width="380" height="197"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="UXE-kV-jOu">
-                                    <rect key="frame" x="0.0" y="0.0" width="306" height="156"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="380" height="197"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="gPp-5Q-Nc6">
-                                            <rect key="frame" x="0.0" y="0.0" width="306" height="156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="197"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="306" height="156"/>
-                                            <size key="maxSize" width="314" height="10000000"/>
+                                            <size key="minSize" width="380" height="197"/>
+                                            <size key="maxSize" width="386" height="529"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="B6j-0Z-Ra0"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="jog-1H-f79">
                                     <rect key="frame" x="-100" y="-100" width="240" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="bQR-i9-J7b">
-                                    <rect key="frame" x="290" y="0.0" width="16" height="156"/>
+                                    <rect key="frame" x="364" y="0.0" width="16" height="197"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TME-iM-t4N">
-                                <rect key="frame" x="142" y="4" width="66" height="32"/>
-                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4gp-wV-V8h">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="quitAppWithSender:" target="GyO-pc-qHE" id="1cL-Z9-gWd"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eic-KP-06p">
-                                <rect key="frame" x="16" y="4" width="72" height="32"/>
-                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FT1-Wr-O19">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="clearTextView:" target="GyO-pc-qHE" id="KZ5-Kf-M3A"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="TME-iM-t4N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eic-KP-06p" secondAttribute="trailing" constant="12" symbolic="YES" id="754-lu-lH6"/>
-                            <constraint firstItem="TME-iM-t4N" firstAttribute="top" secondItem="P21-hJ-bN2" secondAttribute="bottom" constant="12" symbolic="YES" id="An2-kb-u4f"/>
-                            <constraint firstItem="NgA-te-xJK" firstAttribute="trailing" secondItem="P21-hJ-bN2" secondAttribute="trailing" id="CC8-4R-kcL"/>
-                            <constraint firstItem="NgA-te-xJK" firstAttribute="leading" secondItem="LcU-yR-OjU" secondAttribute="leading" id="Fe6-XY-iCm"/>
-                            <constraint firstItem="NgA-te-xJK" firstAttribute="leading" secondItem="lxn-Gj-nZd" secondAttribute="leading" constant="22" id="GOi-Hb-Rzz"/>
-                            <constraint firstItem="NgA-te-xJK" firstAttribute="centerX" secondItem="TME-iM-t4N" secondAttribute="centerX" id="HB5-nO-pay"/>
-                            <constraint firstItem="P21-hJ-bN2" firstAttribute="baseline" secondItem="LcU-yR-OjU" secondAttribute="baseline" id="OCS-YZ-seb"/>
-                            <constraint firstItem="eic-KP-06p" firstAttribute="top" secondItem="LcU-yR-OjU" secondAttribute="bottom" constant="12" id="OPH-kc-vHu"/>
-                            <constraint firstAttribute="bottom" secondItem="NgA-te-xJK" secondAttribute="bottom" constant="78" id="Z4b-9A-l4P"/>
-                            <constraint firstItem="eic-KP-06p" firstAttribute="leading" secondItem="lxn-Gj-nZd" secondAttribute="leading" constant="22" id="d6H-zP-WTw"/>
-                            <constraint firstItem="LcU-yR-OjU" firstAttribute="top" secondItem="NgA-te-xJK" secondAttribute="bottom" constant="13" id="dgj-12-gfC"/>
-                            <constraint firstAttribute="trailing" secondItem="NgA-te-xJK" secondAttribute="trailing" constant="22" id="s7T-AC-K9u"/>
-                            <constraint firstItem="NgA-te-xJK" firstAttribute="top" secondItem="lxn-Gj-nZd" secondAttribute="top" constant="16" id="vnB-nD-AoR"/>
-                            <constraint firstItem="P21-hJ-bN2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LcU-yR-OjU" secondAttribute="trailing" constant="12" symbolic="YES" id="ytW-ep-q1y"/>
+                            <constraint firstItem="Yhe-lm-RpU" firstAttribute="top" secondItem="xKe-qT-Wfq" secondAttribute="top" id="96O-Yu-Iej"/>
+                            <constraint firstAttribute="bottom" secondItem="LcU-yR-OjU" secondAttribute="bottom" constant="10" id="DKW-dH-OPh"/>
+                            <constraint firstItem="Yhe-lm-RpU" firstAttribute="leading" secondItem="xKe-qT-Wfq" secondAttribute="trailing" constant="26" id="FtO-r6-P5e"/>
+                            <constraint firstItem="NgA-te-xJK" firstAttribute="leading" secondItem="lxn-Gj-nZd" secondAttribute="leading" id="GOi-Hb-Rzz"/>
+                            <constraint firstItem="xKe-qT-Wfq" firstAttribute="leading" secondItem="LcU-yR-OjU" secondAttribute="trailing" constant="22" id="K9X-By-Hpb"/>
+                            <constraint firstItem="LcU-yR-OjU" firstAttribute="leading" secondItem="lxn-Gj-nZd" secondAttribute="leading" constant="12" id="O7l-EZ-eo9"/>
+                            <constraint firstAttribute="trailing" secondItem="E6R-H4-Eut" secondAttribute="trailing" constant="12" id="Thh-sG-j2a"/>
+                            <constraint firstAttribute="bottom" secondItem="NgA-te-xJK" secondAttribute="bottom" constant="46" id="Z4b-9A-l4P"/>
+                            <constraint firstItem="xKe-qT-Wfq" firstAttribute="centerY" secondItem="LcU-yR-OjU" secondAttribute="centerY" id="niJ-DI-qba" customClass="MBPointerButton" customModule="MockBob" customModuleProvider="target"/>
+                            <constraint firstAttribute="trailing" secondItem="NgA-te-xJK" secondAttribute="trailing" id="s7T-AC-K9u"/>
+                            <constraint firstAttribute="bottom" secondItem="E6R-H4-Eut" secondAttribute="bottom" constant="13" id="uFN-S4-FwG"/>
+                            <constraint firstItem="NgA-te-xJK" firstAttribute="top" secondItem="lxn-Gj-nZd" secondAttribute="top" id="vnB-nD-AoR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="xKe-qT-Wfq" id="nSy-nb-unB"/>
+                        <outlet property="copyButton" destination="Yhe-lm-RpU" id="Gh9-rL-JXl"/>
                         <outlet property="mockScrollView" destination="NgA-te-xJK" id="m76-yr-1mo"/>
                         <outlet property="mockTextView" destination="gPp-5Q-Nc6" id="7bE-oc-4nn"/>
+                        <outlet property="pasteButton" destination="LcU-yR-OjU" id="qjo-6G-DUN"/>
+                        <outlet property="quitButton" destination="E6R-H4-Eut" id="BV0-MR-nKI"/>
                     </connections>
                 </viewController>
                 <customObject id="uRc-Pl-cYd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="287"/>
+            <point key="canvasLocation" x="74" y="258"/>
         </scene>
         <!--Preferences View Controller-->
         <scene sceneID="T9x-LA-eym">
@@ -854,4 +875,10 @@
             <point key="canvasLocation" x="83" y="675"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="copy" width="201.5" height="248.5"/>
+        <image name="eraser" width="50" height="50"/>
+        <image name="paste" width="201.5" height="248.5"/>
+        <image name="power" width="201.5" height="209.5"/>
+    </resources>
 </document>

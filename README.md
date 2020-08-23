@@ -36,7 +36,7 @@ If you'd rather build the app yourself:
 
 # WhATS neXT?
 Features I am thinking about adding:
+- Add Preferences Window
 - Global keyboard shortcut to meme even faster
-- Update copy/paste buttons for more immersion
 - Auto-open on startup
 - Other things

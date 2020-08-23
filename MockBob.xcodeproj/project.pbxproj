@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F529CCA424F2401700EAD740 /* MBPointerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529CCA324F2401700EAD740 /* MBPointerButton.swift */; };
 		F5E4C6BE2476316B002BF338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4C6BD2476316B002BF338 /* AppDelegate.swift */; };
 		F5E4C6C22476316C002BF338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E4C6C12476316C002BF338 /* Assets.xcassets */; };
 		F5E4C6C52476316C002BF338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E4C6C32476316C002BF338 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F529CCA324F2401700EAD740 /* MBPointerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPointerButton.swift; sourceTree = "<group>"; };
 		F5E4C6BA2476316B002BF338 /* MockBob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockBob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E4C6BD2476316B002BF338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5E4C6C12476316C002BF338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +38,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F529CCA024F23F8D00EAD740 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F529CCA324F2401700EAD740 /* MBPointerButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F529CCA724F317BE00EAD740 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5E4C6CD247631E2002BF338 /* MockbobViewController.swift */,
+				F5F3869D247BAB0B0018561A /* PreferencesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F5E4C6B12476316B002BF338 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +74,13 @@
 		F5E4C6BC2476316B002BF338 /* MockBob */ = {
 			isa = PBXGroup;
 			children = (
+				F529CCA724F317BE00EAD740 /* Controllers */,
+				F529CCA024F23F8D00EAD740 /* Extensions */,
 				F5E4C6BD2476316B002BF338 /* AppDelegate.swift */,
 				F5E4C6C12476316C002BF338 /* Assets.xcassets */,
 				F5E4C6C32476316C002BF338 /* Main.storyboard */,
 				F5E4C6C62476316C002BF338 /* Info.plist */,
 				F5E4C6C72476316C002BF338 /* MockBob.entitlements */,
-				F5E4C6CD247631E2002BF338 /* MockbobViewController.swift */,
-				F5F3869D247BAB0B0018561A /* PreferencesViewController.swift */,
 			);
 			path = MockBob;
 			sourceTree = "<group>";
@@ -136,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F529CCA424F2401700EAD740 /* MBPointerButton.swift in Sources */,
 				F5E4C6CF247631E2002BF338 /* MockbobViewController.swift in Sources */,
 				F5E4C6BE2476316B002BF338 /* AppDelegate.swift in Sources */,
 				F5F3869E247BAB0B0018561A /* PreferencesViewController.swift in Sources */,

@@ -13,8 +13,17 @@ class MockbobViewController: NSViewController, NSTextViewDelegate {
     @IBOutlet weak var mockScrollView: NSScrollView!
     @IBOutlet var mockTextView: NSTextView!
     
+    @IBOutlet weak var pasteButton: MBPointerButton!
+    @IBOutlet weak var clearButton: MBPointerButton!
+    @IBOutlet weak var copyButton: MBPointerButton!
+    @IBOutlet weak var quitButton: MBPointerButton!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        mockTextView.drawsBackground = false
+        
+        // Set inner padding on text field so it doesn't appear right next to the borders
+        mockTextView.textContainerInset = NSSize(width: 10, height: 12)
         
         // Do view setup here.
         mockTextView.delegate = self;
