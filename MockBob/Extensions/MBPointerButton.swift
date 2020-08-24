@@ -14,23 +14,18 @@ class MBPointerButton: NSButton {
     
     private var originalTemplateFlag: Bool = false
     
-    public var hoverText: String = "Test Tooltip"
-    private var hoverPanel: NSPanel = NSPanel()
+    
+    var cursor = NSCursor()
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         if let image = self.image {
             image.isTemplate = true
         }
+
     }
     
     override func resetCursorRects() {
-        super.resetCursorRects()
         addCursorRect(bounds, cursor: .pointingHand)
-    }
-    
-    override func mouseEntered(with event: NSEvent) {
-        super.mouseEntered(with: event)
-        
     }
 }

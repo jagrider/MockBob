@@ -29,6 +29,10 @@ class MockbobViewController: NSViewController, NSTextViewDelegate {
         mockTextView.delegate = self;
     }
     
+    override func viewDidAppear() {
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
+    
     static func freshController() -> MockbobViewController {
         let storyboard = NSStoryboard(name: NSStoryboard.Name(stringLiteral: "Main"), bundle: nil)
         let identifier = NSStoryboard.SceneIdentifier(stringLiteral: "MockbobViewController")
