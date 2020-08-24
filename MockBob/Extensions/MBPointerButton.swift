@@ -25,6 +25,7 @@ class MBPointerButton: NSButton {
     }
     
     override func resetCursorRects() {
+        super.resetCursorRects()
         addCursorRect(bounds, cursor: .pointingHand)
     }
     
